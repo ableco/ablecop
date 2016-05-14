@@ -10,7 +10,7 @@ Add this line to your application's Gemfile to both the `:development` and `:tes
 
 ```ruby
 group :development, :test do
-  gem "ablecop", github: "ableco/gems.able.co"
+  gem "ablecop", github: "ableco/ablecop"
 end
 ```
 
