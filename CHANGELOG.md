@@ -9,6 +9,10 @@
 - Set up [rails_best_practices](https://github.com/railsbp/rails_best_practices) and its [Pronto runner](https://github.com/mmozuras/pronto-rails_best_practices).
 - Refactored Rails generator to easily be able to copy files to different destinations on a project.
 
+## 0.2.1
+
+- Bug fix: Use CircleCI's environment variables to set up the appropriate GitHub repo when running the `ablecop:run_on_circleci` Rake task.
+
 ## 0.2.0
 
 - Refactored Rails generator so that we only add filenames to the project's `.gitignore` file only once (instead of once per file that needs to be added).
