@@ -1,5 +1,9 @@
 # AbleCop Changelog
 
+## Untagged
+
+- Set Rubocop's `TargetRubyVersion` to `2.2`.
+
 ## 0.3.1
 
 - Bug fix: Use CircleCI's environment variables to set up the appropriate GitHub repo when running the `ablecop:run_on_circleci` Rake task.
