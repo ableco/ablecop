@@ -28,12 +28,12 @@ files for each of the gems used for testing. Run the following command:
 bundle exec rails g ablecop:install
 ```
 
-This will create the following configuration files in the root of your
-project and add them to your project's `.gitignore`:
+This will create the following configuration files in your project and add them to your project's `.gitignore`:
 
 * `.rubocop.yml`
 * `.fasterer.yml`
 * `.scss-lint.yml`
+* `config/rails_best_practices.yml`
 
 ## Overriding default configuration files
 
@@ -42,9 +42,10 @@ files in the `config/ablecop` directory of your project containing
 additional configuration settings (in YAML format). You can add the
 following override files:
 
-* `config/ablecop/rubocop.yml`
-* `config/ablecop/fasterer.yml`
-* `config/ablecop/scss-lint.yml`
+* `config/ablecop/.rubocop.yml`
+* `config/ablecop/.fasterer.yml`
+* `config/ablecop/.scss-lint.yml`
+* `config/ablecop/rails_best_practices.yml`
 
 By default, the values in the override files will be merged to the
 default configuration files in the root of your project. You can also
@@ -71,7 +72,7 @@ following:
 
 ```yaml
 # Example override file for Rubocop.
-# Location: config/ablecop/rubocop.yml
+# Location: config/ablecop/.rubocop.yml
 
 AllCops:
   Include:
@@ -113,4 +114,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/ableco/gems.able.co.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ableco/ablecop.
