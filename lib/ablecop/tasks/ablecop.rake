@@ -40,7 +40,7 @@ namespace :ablecop do
 end
 
 def post_status(state, message)
-  repo = "ableco/core.able.co"
+  repo = ENV["CIRCLE_PROJECT_USERNAME"] + "/" + ENV["CIRCLE_PROJECT_REPONAME"]
   sha = ENV["CIRCLE_SHA1"]
 
   options = {
