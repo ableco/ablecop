@@ -3,7 +3,7 @@ require "deep_merge/rails_compat"
 require "yaml"
 
 module Ablecop
-  # Public: `rails generate ablecop install`.
+  # Public: `rails generate ablecop:install`.
   class InstallGenerator < Rails::Generators::Base
     # The key in this hash is the filename located under the config/
     # directory in the root of the gem, and the value is the destination
@@ -30,6 +30,7 @@ module Ablecop
         ensure_config_file!(file_name, destination)
       end
 
+      check_existing_gitignore_files
       add_files_to_gitignore
     end
 
@@ -73,17 +74,26 @@ module Ablecop
       raise ConfigFileError, "Required config file #{file_name} missing" unless File.exist?(application_config_file)
     end
 
+    # Internal: Check if the configuration files specified in CONFIGURATION_FILES
+    # are set properly in the project's .gitignore, and fix them if necessary.
+    #
+    # Returns nil.
+    def check_existing_gitignore_files
+      gitignore_file = File.expand_path(".gitignore", destination_root)
+      return unless File.exist?(gitignore_file)
+
+      config_files = CONFIGURATION_FILES.map do |file_name, destination|
+        "#{destination}/#{file_name}".gsub("./", "").tr("/", "\/")
+      end.join("|")
+
+      gsub_file gitignore_file, /^#{config_files}$/ do |match|
+        "/#{match}"
+      end
+    end
+
     # Internal: Check if the configuration files in the supplied array is
     # already in the application's .gitignore file, and add the file names
     # that do not exist.
-    #
-    # configuration_files - Array of strings of the configuration file
-    #                       names we want to include in .gitignore.
-    #
-    # Examples
-    #
-    #   # rubocop
-    #   add_to_gitignore(["rubocop.yml", "fasterer.yml", "scss-lint.yml"])
     #
     # Returns nil.
     def add_files_to_gitignore
@@ -91,7 +101,7 @@ module Ablecop
       create_file(".gitignore") unless File.exist?(gitignore_file)
 
       files_to_add = CONFIGURATION_FILES.map do |file_name, destination|
-        "#{destination}/#{file_name}".gsub("./", "")
+        "/#{destination}/#{file_name}".gsub("./", "")
       end
 
       files_to_add.reject! do |file_name|

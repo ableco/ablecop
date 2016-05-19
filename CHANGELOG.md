@@ -1,5 +1,9 @@
 # AbleCop Changelog
 
+## Untagged
+
+- Add method to ensure that the project's `.gitignore` file includes only AbleCop's configuration files, as opposed to ignoring all files of the same name (which includes the project's override files).
+
 ## 0.3.1
 
 - Bug fix: Use CircleCI's environment variables to set up the appropriate GitHub repo when running the `ablecop:run_on_circleci` Rake task.
