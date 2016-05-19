@@ -10,11 +10,13 @@ Add this line to your application's Gemfile to both the `:development` and `:tes
 
 ```ruby
 group :development, :test do
-  gem "ablecop", github: "ableco/gems.able.co"
+  gem "ablecop", github: "ableco/ablecop", tag: "v0.2.1"
 end
 ```
 
 Run `bundle install` to install all the necessary gems.
+
+You can change the `tag` in the Gemfile to point to an [earlier release](https://github.com/ableco/ablecop/releases) if you want to install an older version of AbleCop.
 
 ## Configuration file setup
 
