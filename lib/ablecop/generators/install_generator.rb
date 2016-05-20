@@ -82,12 +82,10 @@ module Ablecop
       gitignore_file = File.expand_path(".gitignore", destination_root)
       return unless File.exist?(gitignore_file)
 
-      config_files = CONFIGURATION_FILES.map do |file_name, destination|
-        "#{destination}/#{file_name}".gsub("./", "").tr("/", "\/")
-      end.join("|")
-
-      gsub_file gitignore_file, /^#{config_files}$/ do |match|
-        "/#{match}"
+      CONFIGURATION_FILES.each do |file_name, destination|
+        file = "#{destination}/#{file_name}".gsub("./", "").tr("/", "\/")
+        next unless File.readlines(gitignore_file).any? { |line| line.strip == file }
+        gsub_file(gitignore_file, /^(#{file})$/, "/#{file}")
       end
     end
 
