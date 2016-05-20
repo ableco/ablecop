@@ -2,8 +2,9 @@
 
 ## Untagged
 
-- Set Rubocop's `TargetRubyVersion` to `2.2`.
-- Add method to ensure that the project's `.gitignore` file includes only AbleCop's configuration files, as opposed to ignoring all files of the same name (which includes the project's override files).
+- Set Rubocop's `TargetRubyVersion` to `2.2`. (#9)
+- Add method to ensure that the project's `.gitignore` file includes only AbleCop's configuration files, as opposed to ignoring all files of the same name (which includes the project's override files). (#10)
+- Comment out checks for unused methods in rails_best_practices due to a high number of false positives (#14)
 
 ## 0.3.1
 
