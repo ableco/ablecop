@@ -93,7 +93,7 @@ AllCops:
     - 'db/seeds/**/*'
 ```
 
-## CircleCI Setup
+## CircleCI / GitHub Setup
 
 To enable CircleCI to run AbleCop's checks and comment on commits with each
 push, add the following configuration to your project's `circle.yml`:
@@ -105,6 +105,12 @@ test:
   post:
     - RAILS_ENV=development bundle exec rake ablecop:run_on_circleci
 ```
+
+You also need to set up the `GITHUB_ACCESS_TOKEN` environment variable in CircleCI. This is a personal access token from GitHub that will allow AbleCop to post comments for warnings that occur in your commits, as well as update a pull request's status if it exists.
+
+To set up the environment variable in CircleCI, you can either [include it in your circleci.yml configuration file](https://circleci.com/docs/configuration/#environment) or add it directly in CircleCI by going to your project in CircleCI and going to **Project Settings > Environment Variables**. It is strongly recommended that the environment variable is added in CircleCI directly.
+
+If you do not have an access token from GitHub, you can create one by following [these instructions](https://help.github.com/articles/creating-an-access-token-for-command-line-use/).
 
 ## Development
 
