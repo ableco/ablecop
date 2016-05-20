@@ -38,19 +38,19 @@ describe Ablecop::InstallGenerator, type: :generator do
       end
 
       it "adds '.rubocop.yml' to the project's .gitignore" do
-        expect(File.readlines(gitignore_file)).to include(/^.rubocop.yml$/)
+        expect(File.readlines(gitignore_file)).to include(%r{^/.rubocop.yml$})
       end
 
       it "adds '.fasterer.yml' to the project's .gitignore" do
-        expect(File.readlines(gitignore_file)).to include(/^.fasterer.yml$/)
+        expect(File.readlines(gitignore_file)).to include(%r{^/.fasterer.yml$})
       end
 
       it "adds '.scss-lint.yml' to the project's .gitignore" do
-        expect(File.readlines(gitignore_file)).to include(/^.scss-lint.yml$/)
+        expect(File.readlines(gitignore_file)).to include(%r{^/.scss-lint.yml$})
       end
 
       it "adds 'config/rails_best_practices.yml' to the project's .gitignore" do
-        expect(File.readlines(gitignore_file)).to include(%r{^config/rails_best_practices.yml$})
+        expect(File.readlines(gitignore_file)).to include(%r{^/config/rails_best_practices.yml$})
       end
     end
 
@@ -73,6 +73,36 @@ describe Ablecop::InstallGenerator, type: :generator do
     end
 
     it "raises a ConfigFileError if the configuration file was not copied"
+  end
+
+  context "checking existing files in .gitignore" do
+    let(:gitignore_file) { File.expand_path(".gitignore", destination_root) }
+
+    before(:all) do
+      prepare_destination
+      File.open("#{destination_root}/.gitignore", "w") { |f| f.write(".fasterer.yml\n.rubocop.yml\n.scss-lint.yml\nconfig\/rails_best_practices.yml\n") }
+      run_generator
+    end
+
+    it "updates '.rubocop.yml' to '/.rubocop.yml' in the project's .gitignore if it exists" do
+      expect(File.readlines(gitignore_file)).to_not include(/^.rubocop.yml$/)
+      expect(File.readlines(gitignore_file)).to include(%r{^/.rubocop.yml$})
+    end
+
+    it "adds '.fasterer.yml' to '/.fasterer.yml' in the project's .gitignore if it exists" do
+      expect(File.readlines(gitignore_file)).to_not include(/^.fasterer.yml$/)
+      expect(File.readlines(gitignore_file)).to include(%r{^/.fasterer.yml$})
+    end
+
+    it "adds '.scss-lint.yml' to './scss-lint.yml' in the project's .gitignore if it exists" do
+      expect(File.readlines(gitignore_file)).to_not include(/^.scss-lint.yml$/)
+      expect(File.readlines(gitignore_file)).to include(%r{^/.scss-lint.yml$})
+    end
+
+    it "adds 'config/rails_best_practices.yml' to '/config/rails_best_practices.yml' in the project's .gitignore if it exists" do
+      expect(File.readlines(gitignore_file)).to_not include(%r{^config/rails_best_practices.yml$})
+      expect(File.readlines(gitignore_file)).to include(%r{^/config/rails_best_practices.yml$})
+    end
   end
 
   context "overriding default configuration files" do
