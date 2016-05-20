@@ -89,19 +89,45 @@ describe Ablecop::InstallGenerator, type: :generator do
       expect(File.readlines(gitignore_file)).to include(%r{^/.rubocop.yml$})
     end
 
-    it "adds '.fasterer.yml' to '/.fasterer.yml' in the project's .gitignore if it exists" do
+    it "updates '.fasterer.yml' to '/.fasterer.yml' in the project's .gitignore if it exists" do
       expect(File.readlines(gitignore_file)).to_not include(/^.fasterer.yml$/)
       expect(File.readlines(gitignore_file)).to include(%r{^/.fasterer.yml$})
     end
 
-    it "adds '.scss-lint.yml' to './scss-lint.yml' in the project's .gitignore if it exists" do
+    it "updates '.scss-lint.yml' to './scss-lint.yml' in the project's .gitignore if it exists" do
       expect(File.readlines(gitignore_file)).to_not include(/^.scss-lint.yml$/)
       expect(File.readlines(gitignore_file)).to include(%r{^/.scss-lint.yml$})
     end
 
-    it "adds 'config/rails_best_practices.yml' to '/config/rails_best_practices.yml' in the project's .gitignore if it exists" do
+    it "updates 'config/rails_best_practices.yml' to '/config/rails_best_practices.yml' in the project's .gitignore if it exists" do
       expect(File.readlines(gitignore_file)).to_not include(%r{^config/rails_best_practices.yml$})
       expect(File.readlines(gitignore_file)).to include(%r{^/config/rails_best_practices.yml$})
+    end
+  end
+
+  context "checking existing files in .gitignore that don't need to be updated" do
+    let(:gitignore_file) { File.expand_path(".gitignore", destination_root) }
+
+    before(:all) do
+      prepare_destination
+      File.open("#{destination_root}/.gitignore", "w") { |f| f.write("/.fasterer.yml\n/.rubocop.yml\n/.scss-lint.yml\n/config\/rails_best_practices.yml\n") }
+      run_generator
+    end
+
+    it "includes '.rubocop.yml' once in the project's .gitignore" do
+      expect(File.read(gitignore_file).scan(/.rubocop.yml/).length).to eq(1)
+    end
+
+    it "includes '.fasterer.yml' once in the project's .gitignore" do
+      expect(File.read(gitignore_file).scan(/.fasterer.yml/).length).to eq(1)
+    end
+
+    it "includes '.scss-lint.yml' once in the project's .gitignore" do
+      expect(File.read(gitignore_file).scan(/.scss-lint.yml/).length).to eq(1)
+    end
+
+    it "includes 'config/rails_best_practices.yml' once in the project's .gitignore" do
+      expect(File.read(gitignore_file).scan(%r{config/rails_best_practices.yml}).length).to eq(1)
     end
   end
 
