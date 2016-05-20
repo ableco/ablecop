@@ -1,6 +1,6 @@
 # AbleCop Changelog
 
-## Untagged
+## 0.3.2
 
 - Set Rubocop's `TargetRubyVersion` to `2.2`. (#9)
 - Add method to ensure that the project's `.gitignore` file includes only AbleCop's configuration files, as opposed to ignoring all files of the same name (which includes the project's override files). (#10)
