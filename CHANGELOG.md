@@ -1,5 +1,9 @@
 # AbleCop Changelog
 
+## Unreleased
+
+- Ensure [pronto-brakeman](https://github.com/mmozuras/pronto-brakeman) is loaded last to deal with bug related to load order (#20)
+
 ## 0.3.2
 
 - Set Rubocop's `TargetRubyVersion` to `2.2`. (#9)
