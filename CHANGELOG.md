@@ -1,6 +1,6 @@
 # AbleCop Changelog
 
-## Unreleased
+## 0.3.3
 
 - Ensure [pronto-brakeman](https://github.com/mmozuras/pronto-brakeman) is loaded last to deal with bug related to load order (#20)
 
