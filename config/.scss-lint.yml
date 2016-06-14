@@ -46,7 +46,7 @@ linters:
     enabled: false
 
   DuplicateProperty:
-    enabled: true
+    ignore_consecutive: true
 
   ElsePlacement:
     enabled: true
