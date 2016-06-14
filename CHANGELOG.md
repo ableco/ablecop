@@ -1,5 +1,9 @@
 # AbleCop Changelog
 
+## Unreleased
+
+- **scss-lint**: Update the [DuplicateProperty](https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#duplicateproperty) rule to `ignore_consecutive: true`.
+
 ## 0.3.3
 
 - Ensure [pronto-brakeman](https://github.com/mmozuras/pronto-brakeman) is loaded last to deal with bug related to load order (#20)
