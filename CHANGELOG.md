@@ -1,6 +1,6 @@
 # AbleCop Changelog
 
-## Unreleased
+## 0.3.4
 
 - **scss-lint**: Update the [DuplicateProperty](https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#duplicateproperty) rule to `ignore_consecutive: true`.
 - **brakeman**: Upgraded to [3.3.2](http://brakemanscanner.org/blog/2016/06/10/brakeman-3-dot-3-2-released/).
