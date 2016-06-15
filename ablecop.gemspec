@@ -55,7 +55,7 @@ MSG
   spec.add_dependency "pronto-rubocop", "~> 0.6.2"
 
   # Brakeman scans for security vulenerabilities.
-  spec.add_dependency "brakeman", "~> 3.3.0"
+  spec.add_dependency "brakeman", "~> 3.3.2"
   spec.add_dependency "pronto-brakeman", "~> 0.6.0"
 
   # Fasterer will suggest some speed improvements.
