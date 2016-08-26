@@ -15,14 +15,9 @@ namespace :ablecop do
       ENV["PULL_REQUEST_ID"] = ENV["CI_PULL_REQUEST"].match("[0-9]+$").to_s
       abort("Pull Request ID is missing") unless ENV["PULL_REQUEST_ID"].present?
 
-      formatter = Pronto::Formatter::GithubPullRequestFormatter.new
-      messages = Pronto.run("origin/master", ".", formatter)
-
-      if messages.any?
-        post_status("error", "Pronto found #{messages.size} #{messages.size > 1 ? 'issues' : 'issue'}.")
-      else
-        post_status("success", "Your code meets our standards.")
-      end
+      pull_request_formatter = Pronto::Formatter::GithubPullRequestFormatter.new
+      status_formatter = Pronto::Formatter::GithubStatusFormatter.new
+      Pronto.run("origin/master", ".", [pull_request_formatter, status_formatter])
     # If CircleCI does not include the pull request information, run the
     # code analysis on the current commit.
     else
@@ -37,20 +32,6 @@ namespace :ablecop do
     formatter = Pronto::Formatter::TextFormatter.new
     Pronto.run("origin/master", ".", formatter)
   end
-end
-
-def post_status(state, message)
-  repo = ENV["CIRCLE_PROJECT_USERNAME"] + "/" + ENV["CIRCLE_PROJECT_REPONAME"]
-  sha = ENV["CIRCLE_SHA1"]
-
-  options = {
-    context: "pronto",
-    target_url: ENV["CIRCLE_BUILD_URL"],
-    description: message
-  }
-
-  Octokit.access_token = ENV["GITHUB_ACCESS_TOKEN"]
-  Octokit.create_status(repo, sha, state, options)
 end
 
 # There's an issue with Pronto when running the Brakeman and rails_best_practices
