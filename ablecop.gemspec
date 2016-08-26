@@ -35,7 +35,7 @@ test:
 
 MSG
 
-  spec.required_ruby_version = '>= 2.2.0'
+  spec.required_ruby_version = ">= 2.2.0"
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake", "~> 10.0"
