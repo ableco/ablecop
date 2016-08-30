@@ -1,5 +1,17 @@
 # AbleCop Changelog
 
+## 0.3.5
+
+- **Pronto**: Update to [0.7.1](https://github.com/mmozuras/pronto/blob/master/CHANGELOG.md#071), and all its associated runners to 0.7.x (#29)
+- **RuboCop**: Update to [0.42.0](https://github.com/bbatsov/rubocop/blob/master/CHANGELOG.md#0420-2016-07-25) (#29)
+- **Brakeman**: Update to [3.3.5](https://github.com/presidentbeef/brakeman/blob/master/CHANGES) (#29)
+- **scss-lint**: Update to [0.49.0](https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md#0490) (#29)
+- **rails_best_practices**: Update to [1.17.0](https://github.com/railsbp/rails_best_practices/blob/master/CHANGELOG.md#1170-2016-07-14) (#29)
+- **rails_best_practices**: Comment out [RemoveTrailingWhitespaceCheck](http://rails-bestpractices.com/posts/2010/12/02/remove-trailing-whitespace/) since RuboCop already does the same (#30)
+- Use new `GithubPullRequestFormatter` formatter to update GitHub's pull request statuses and remove custom code written to do this (#29)
+- Set minimum Ruby version for AbleCop to Ruby 2.2.0 (#29)
+
+
 ## 0.3.4
 
 - **scss-lint**: Update the [DuplicateProperty](https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#duplicateproperty) rule to `ignore_consecutive: true`.
