@@ -35,6 +35,8 @@ test:
 
 MSG
 
+  spec.required_ruby_version = ">= 2.2.0"
+
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
@@ -45,31 +47,31 @@ MSG
   spec.add_dependency "deep_merge", "~> 1.0.1"
 
   # Pronto posts feedback from its runners to Github.
-  spec.add_dependency "pronto", "~> 0.6.0"
+  spec.add_dependency "pronto", "~> 0.7.1"
 
   # Octokit is required for updating commits / pull requests.
   spec.add_dependency "octokit", "~> 4.3.0"
 
   # Rubocop is a static code analyzer based on our Ruby style guide.
-  spec.add_dependency "rubocop", "~> 0.40.0"
-  spec.add_dependency "pronto-rubocop", "~> 0.6.2"
+  spec.add_dependency "rubocop", "~> 0.42.0"
+  spec.add_dependency "pronto-rubocop", "~> 0.7.0"
 
   # Brakeman scans for security vulenerabilities.
-  spec.add_dependency "brakeman", "~> 3.3.2"
-  spec.add_dependency "pronto-brakeman", "~> 0.6.0"
+  spec.add_dependency "brakeman", "~> 3.3.5"
+  spec.add_dependency "pronto-brakeman", "~> 0.7.0"
 
   # Fasterer will suggest some speed improvements.
   spec.add_dependency "fasterer", "~> 0.3.2"
-  spec.add_dependency "pronto-fasterer", "~> 0.6.1"
+  spec.add_dependency "pronto-fasterer", "~> 0.7.0"
 
   # SCSS Lint is a static code analyzer based on our SCSS style guide.
-  spec.add_dependency "scss_lint", "~> 0.48.0"
-  spec.add_dependency "pronto-scss", "~> 0.6.0"
+  spec.add_dependency "scss_lint", "~> 0.49.0"
+  spec.add_dependency "pronto-scss", "~> 0.7.0"
 
   # Pronto runner for monitoring Rails schema.rb or structure.sql consistency.
-  spec.add_dependency "pronto-rails_schema", "~> 0.6.0"
+  spec.add_dependency "pronto-rails_schema", "~> 0.7.0"
 
   # rails_best_practices is a code metric tool to check the quality of Rails code.
-  spec.add_dependency "rails_best_practices", "~> 1.16.0"
-  spec.add_dependency "pronto-rails_best_practices", "0.6.0"
+  spec.add_dependency "rails_best_practices", "~> 1.17.0"
+  spec.add_dependency "pronto-rails_best_practices", "0.7.0"
 end
