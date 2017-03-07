@@ -1,5 +1,9 @@
 # AbleCop Changelog
 
+## Unreleased
+
+- **AbleCop**: Set Gemfile to use Ruby 2.3.3 for development
+
 ## 0.3.5
 
 - **Pronto**: Update to [0.7.1](https://github.com/mmozuras/pronto/blob/master/CHANGELOG.md#071), and all its associated runners to 0.7.x (#29)
