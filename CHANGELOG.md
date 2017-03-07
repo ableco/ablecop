@@ -11,6 +11,7 @@
 - **scss-lint**: Update to [0.52.0](https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md#0520)
 - **rails_best_practices**: Update to [1.18.0](https://github.com/railsbp/rails_best_practices/blob/master/CHANGELOG.md#1180-2017-03-01)
 - **AbleCop**: Disabled the [Pronto::RailsSchema](https://github.com/raimondasv/pronto-rails_schema) runner due to currently not having support for Pronto 0.8.x
+- **rails_best_practices**: Comment out [NotRescueExceptionCheck](https://rails-bestpractices.com/posts/2012/11/01/don-t-rescue-exception-rescue-standarderror/) since RuboCop already does the same
 
 ## 0.3.5
 
