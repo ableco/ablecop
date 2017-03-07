@@ -38,40 +38,43 @@ MSG
   spec.required_ruby_version = ">= 2.2.0"
 
   spec.add_development_dependency "bundler"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "rake", "~> 12.0"
+  spec.add_development_dependency "rspec", "~> 3.5"
   spec.add_development_dependency "railties", [">= 4.0", "< 4.3"]
   spec.add_development_dependency "generator_spec", "~> 0.9.3"
 
   # Recursively merge hashes - used for merging in configuration overrides.
-  spec.add_dependency "deep_merge", "~> 1.0.1"
+  spec.add_dependency "deep_merge", "~> 1.1.1"
 
   # Pronto posts feedback from its runners to Github.
-  spec.add_dependency "pronto", "~> 0.7.1"
+  spec.add_dependency "pronto", "~> 0.8.2"
 
   # Octokit is required for updating commits / pull requests.
-  spec.add_dependency "octokit", "~> 4.3.0"
+  spec.add_dependency "octokit", "~> 4.6.2"
 
   # Rubocop is a static code analyzer based on our Ruby style guide.
-  spec.add_dependency "rubocop", "~> 0.42.0"
-  spec.add_dependency "pronto-rubocop", "~> 0.7.0"
+  spec.add_dependency "rubocop", "~> 0.47.0"
+  spec.add_dependency "pronto-rubocop", "~> 0.8.0"
 
   # Brakeman scans for security vulenerabilities.
-  spec.add_dependency "brakeman", "~> 3.3.5"
-  spec.add_dependency "pronto-brakeman", "~> 0.7.0"
+  spec.add_dependency "brakeman", "~> 3.5.0"
+  spec.add_dependency "pronto-brakeman", "~> 0.8.0"
 
   # Fasterer will suggest some speed improvements.
   spec.add_dependency "fasterer", "~> 0.3.2"
-  spec.add_dependency "pronto-fasterer", "~> 0.7.0"
+  spec.add_dependency "pronto-fasterer", "~> 0.8.0"
 
   # SCSS Lint is a static code analyzer based on our SCSS style guide.
-  spec.add_dependency "scss_lint", "~> 0.49.0"
-  spec.add_dependency "pronto-scss", "~> 0.7.0"
+  spec.add_dependency "scss_lint", "~> 0.52.0"
+  spec.add_dependency "pronto-scss", "~> 0.8.0"
 
   # Pronto runner for monitoring Rails schema.rb or structure.sql consistency.
-  spec.add_dependency "pronto-rails_schema", "~> 0.7.0"
+  #
+  # TODO: This has been disabled for now while the gem is updated to support
+  # pronto 0.8.0. Once the gem has been updated we can re-enable this.
+  # spec.add_dependency "pronto-rails_schema", "~> 0.7.0"
 
   # rails_best_practices is a code metric tool to check the quality of Rails code.
-  spec.add_dependency "rails_best_practices", "~> 1.17.0"
-  spec.add_dependency "pronto-rails_best_practices", "0.7.0"
+  spec.add_dependency "rails_best_practices", "~> 1.18.0"
+  spec.add_dependency "pronto-rails_best_practices", "0.8.0"
 end

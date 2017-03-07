@@ -1,5 +1,17 @@
 # AbleCop Changelog
 
+## Unreleased
+
+- **AbleCop**: Set Gemfile to use Ruby 2.3.3 for development
+- **AbleCop**: Update development dependency gems (Rake and RSpec) to their latest versions
+- **Pronto**: Update to [0.8.2](https://github.com/mmozuras/pronto/blob/master/CHANGELOG.md#082), and all its associated runners to 0.8.x
+- **RuboCop**: Update to [0.47.1](https://github.com/bbatsov/rubocop/blob/master/CHANGELOG.md#0471-2017-01-18)
+- **RuboCop**: Update the default configuration file to support the latest RuboCop version
+- **Brakeman**: Update to [3.5.0](https://github.com/presidentbeef/brakeman/blob/master/CHANGES)
+- **scss-lint**: Update to [0.52.0](https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md#0520)
+- **rails_best_practices**: Update to [1.18.0](https://github.com/railsbp/rails_best_practices/blob/master/CHANGELOG.md#1180-2017-03-01)
+- **AbleCop**: Disabled the [Pronto::RailsSchema](https://github.com/raimondasv/pronto-rails_schema) runner due to currently not having support for Pronto 0.8.x
+
 ## 0.3.5
 
 - **Pronto**: Update to [0.7.1](https://github.com/mmozuras/pronto/blob/master/CHANGELOG.md#071), and all its associated runners to 0.7.x (#29)
