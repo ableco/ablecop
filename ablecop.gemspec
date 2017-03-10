@@ -69,10 +69,7 @@ MSG
   spec.add_dependency "pronto-scss", "~> 0.8.0"
 
   # Pronto runner for monitoring Rails schema.rb or structure.sql consistency.
-  #
-  # TODO: This has been disabled for now while the gem is updated to support
-  # pronto 0.8.0. Once the gem has been updated we can re-enable this.
-  # spec.add_dependency "pronto-rails_schema", "~> 0.7.0"
+  spec.add_dependency "pronto-rails_schema", "~> 0.8.0"
 
   # rails_best_practices is a code metric tool to check the quality of Rails code.
   spec.add_dependency "rails_best_practices", "~> 1.18.0"
