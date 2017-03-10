@@ -1,17 +1,17 @@
 # AbleCop Changelog
 
-## Unreleased
+## 0.4.0
 
-- **AbleCop**: Set Gemfile to use Ruby 2.3.3 for development
-- **AbleCop**: Update development dependency gems (Rake and RSpec) to their latest versions
-- **Pronto**: Update to [0.8.2](https://github.com/mmozuras/pronto/blob/master/CHANGELOG.md#082), and all its associated runners to 0.8.x
-- **RuboCop**: Update to [0.47.1](https://github.com/bbatsov/rubocop/blob/master/CHANGELOG.md#0471-2017-01-18)
-- **RuboCop**: Update the default configuration file to support the latest RuboCop version
-- **Brakeman**: Update to [3.5.0](https://github.com/presidentbeef/brakeman/blob/master/CHANGES)
-- **scss-lint**: Update to [0.52.0](https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md#0520)
-- **rails_best_practices**: Update to [1.18.0](https://github.com/railsbp/rails_best_practices/blob/master/CHANGELOG.md#1180-2017-03-01)
-- **rails_best_practices**: Comment out [NotRescueExceptionCheck](https://rails-bestpractices.com/posts/2012/11/01/don-t-rescue-exception-rescue-standarderror/) since RuboCop already does the same
-- **AbleCop**: Fix issue #31 - Pronto raises exception when pronto-rails_schema raises warning
+- **AbleCop**: Set Gemfile to use Ruby 2.3.3 for development (#33)
+- **AbleCop**: Update development dependency gems (Rake and RSpec) to their latest versions (#33)
+- **Pronto**: Update to [0.8.2](https://github.com/mmozuras/pronto/blob/master/CHANGELOG.md#082), and all its associated runners to 0.8.x (#33)
+- **RuboCop**: Update to [0.47.1](https://github.com/bbatsov/rubocop/blob/master/CHANGELOG.md#0471-2017-01-18) (#33)
+- **RuboCop**: Update the default configuration file to support the latest RuboCop version (#33)
+- **Brakeman**: Update to [3.5.0](https://github.com/presidentbeef/brakeman/blob/master/CHANGES) (#33)
+- **scss-lint**: Update to [0.52.0](https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md#0520) (#33)
+- **rails_best_practices**: Update to [1.18.0](https://github.com/railsbp/rails_best_practices/blob/master/CHANGELOG.md#1180-2017-03-01) (#33)
+- **rails_best_practices**: Comment out [NotRescueExceptionCheck](https://rails-bestpractices.com/posts/2012/11/01/don-t-rescue-exception-rescue-standarderror/) since RuboCop already does the same (#34)
+- **AbleCop**: Fix issue #31 - Pronto raises exception when pronto-rails_schema raises warning (#35)
 
 ## 0.3.5
 
