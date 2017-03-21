@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["engineering@able.co"]
   spec.summary       = "ablecop - code analysis"
   spec.description   = "ablecop is a collection of best practices for writing code at Able."
-  spec.homepage      = "https://github.com/ableco/gems.able.co/tree/master/ablecop"
+  spec.homepage      = "https://github.com/ableco/ablecop"
   spec.files         = `git ls-files`.split("\n")
   spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   spec.require_paths = ["lib"]
