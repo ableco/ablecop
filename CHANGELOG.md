@@ -1,6 +1,6 @@
 # AbleCop Changelog
 
-## Unreleased
+## 0.4.1
 
 - **AbleCop**: Change GitHub access token environment variable from `GITHUB_ACCESS_TOKEN` `PRONTO_GITHUB_ACCESS_TOKEN` to reflect changes in Pronto 0.8.0.
 
