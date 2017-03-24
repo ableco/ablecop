@@ -5,7 +5,7 @@ desc "Runs ablecop automatted code review on CircleCI"
 namespace :ablecop do
   desc "Run code analysis for the current commit / pull request on CircleCI"
   task :run_on_circleci do
-    abort("Github access token is missing") unless ENV["GITHUB_ACCESS_TOKEN"].present?
+    abort("The GitHub access token is missing. Please set the PRONTO_GITHUB_ACCESS_TOKEN environment variable as specified in the README: https://github.com/ableco/ablecop#circleci--github-setup") unless ENV["PRONTO_GITHUB_ACCESS_TOKEN"].present?
 
     require_pronto_runners
 

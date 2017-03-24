@@ -1,5 +1,9 @@
 # AbleCop Changelog
 
+## 0.4.1
+
+- **AbleCop**: Change GitHub access token environment variable from `GITHUB_ACCESS_TOKEN` `PRONTO_GITHUB_ACCESS_TOKEN` to reflect changes in Pronto 0.8.0.
+
 ## 0.4.0
 
 - **AbleCop**: Set Gemfile to use Ruby 2.3.3 for development (#33)
