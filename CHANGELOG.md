@@ -1,5 +1,9 @@
 # AbleCop Changelog
 
+## Unreleased
+
+- **RuboCop**: Update to [0.48.1](https://github.com/bbatsov/rubocop/blob/master/CHANGELOG.md#0481-2017-04-03) (#40)
+
 ## 0.4.1
 
 - **AbleCop**: Change GitHub access token environment variable from `GITHUB_ACCESS_TOKEN` `PRONTO_GITHUB_ACCESS_TOKEN` to reflect changes in Pronto 0.8.0.
