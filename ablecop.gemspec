@@ -1,4 +1,5 @@
 # coding: utf-8
+
 $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "ablecop/version"
 
@@ -15,25 +16,24 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.post_install_message = <<-MSG
-Ablecop Setup - Local
-===========================================================================
-You can generate the necessary configuration files to run any code
-analysis locally by running the following command:
+    Ablecop Setup - Local
+    ===========================================================================
+    You can generate the necessary configuration files to run any code
+    analysis locally by running the following command:
 
-    bundle exec rails g ablecop:install
+        bundle exec rails g ablecop:install
 
-Ablecop Setup - CircleCI
-===========================================================================
-To enable CircleCI to run ablecop's checks and comment on commits with each
-push, add the following configuration to your circle.yml configuration:
+    Ablecop Setup - CircleCI
+    ===========================================================================
+    To enable CircleCI to run ablecop's checks and comment on commits with each
+    push, add the following configuration to your circle.yml configuration:
 
-test:
-  pre:
-    - bundle exec rails g ablecop:install
-  post:
-    - RAILS_ENV=development bundle exec rake ablecop:run_on_circleci
-
-MSG
+    test:
+      pre:
+        - bundle exec rails g ablecop:install
+      post:
+        - RAILS_ENV=development bundle exec rake ablecop:run_on_circleci
+  MSG
 
   spec.required_ruby_version = ">= 2.2.0"
 
@@ -53,7 +53,7 @@ MSG
   spec.add_dependency "octokit", "~> 4.6.2"
 
   # Rubocop is a static code analyzer based on our Ruby style guide.
-  spec.add_dependency "rubocop", "~> 0.47.0"
+  spec.add_dependency "rubocop", "~> 0.48.1"
   spec.add_dependency "pronto-rubocop", "~> 0.8.0"
 
   # Brakeman scans for security vulenerabilities.

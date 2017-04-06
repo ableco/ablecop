@@ -5,7 +5,7 @@ desc "Runs ablecop automatted code review on CircleCI"
 namespace :ablecop do
   desc "Run code analysis for the current commit / pull request on CircleCI"
   task :run_on_circleci do
-    abort("The GitHub access token is missing. Please set the PRONTO_GITHUB_ACCESS_TOKEN environment variable as specified in the README: https://github.com/ableco/ablecop#circleci--github-setup") unless ENV["PRONTO_GITHUB_ACCESS_TOKEN"].present?
+    abort("The GitHub access token is missing. Please set the PRONTO_GITHUB_ACCESS_TOKEN environment variable as specified in the README: https://github.com/ableco/ablecop#circleci--github-setup") if ENV["PRONTO_GITHUB_ACCESS_TOKEN"].blank?
 
     require_pronto_runners
 
@@ -13,7 +13,7 @@ namespace :ablecop do
     # branch for the pull request.
     if ENV["CI_PULL_REQUEST"].present?
       ENV["PULL_REQUEST_ID"] = ENV["CI_PULL_REQUEST"].match("[0-9]+$").to_s
-      abort("Pull Request ID is missing") unless ENV["PULL_REQUEST_ID"].present?
+      abort("Pull Request ID is missing") if ENV["PULL_REQUEST_ID"].blank?
 
       pull_request_formatter = Pronto::Formatter::GithubPullRequestFormatter.new
       status_formatter = Pronto::Formatter::GithubStatusFormatter.new
