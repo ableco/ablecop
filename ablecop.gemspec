@@ -65,7 +65,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "pronto-fasterer", "~> 0.8.0"
 
   # SCSS Lint is a static code analyzer based on our SCSS style guide.
-  spec.add_dependency "scss_lint", "~> 0.52.0"
+  spec.add_dependency "scss_lint", "~> 0.53.0"
   spec.add_dependency "pronto-scss", "~> 0.8.0"
 
   # Pronto runner for monitoring Rails schema.rb or structure.sql consistency.

@@ -6,6 +6,7 @@
 - **AbleCop**: Support for Ruby 2.4.
 - **Pronto**: Update pronto-rubocop to [0.8.1](https://github.com/mmozuras/pronto-rubocop/pull/24)
 - **Brakeman**: Update to [3.6.1](https://github.com/presidentbeef/brakeman/blob/master/CHANGES)
+- **scss-lint**: Update to [0.53.0](https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md#0530)
 
 ## 0.4.1
 
