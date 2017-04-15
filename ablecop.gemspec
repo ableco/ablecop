@@ -57,7 +57,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "pronto-rubocop", "~> 0.8.1"
 
   # Brakeman scans for security vulenerabilities.
-  spec.add_dependency "brakeman", "~> 3.5.0"
+  spec.add_dependency "brakeman", "~> 3.6.1"
   spec.add_dependency "pronto-brakeman", "~> 0.8.0"
 
   # Fasterer will suggest some speed improvements.
