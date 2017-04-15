@@ -54,7 +54,7 @@ Gem::Specification.new do |spec|
 
   # Rubocop is a static code analyzer based on our Ruby style guide.
   spec.add_dependency "rubocop", "~> 0.48.1"
-  spec.add_dependency "pronto-rubocop", "~> 0.8.0"
+  spec.add_dependency "pronto-rubocop", "~> 0.8.1"
 
   # Brakeman scans for security vulenerabilities.
   spec.add_dependency "brakeman", "~> 3.5.0"

@@ -4,6 +4,7 @@
 
 - **RuboCop**: Update to [0.48.1](https://github.com/bbatsov/rubocop/blob/master/CHANGELOG.md#0481-2017-04-03) (#40)
 - **AbleCop**: Support for Ruby 2.4.
+- **Pronto**: Update pronto-rubocop to [0.8.1](https://github.com/mmozuras/pronto-rubocop/pull/24)
 
 ## 0.4.1
 
