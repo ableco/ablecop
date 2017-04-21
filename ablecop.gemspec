@@ -40,7 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake", "~> 12.0"
   spec.add_development_dependency "rspec", "~> 3.5"
-  spec.add_development_dependency "railties", [">= 4.0", "< 4.3"]
+  spec.add_development_dependency "railties", [">= 4.0", "< 5.1"]
   spec.add_development_dependency "generator_spec", "~> 0.9.3"
 
   # Recursively merge hashes - used for merging in configuration overrides.
@@ -54,10 +54,10 @@ Gem::Specification.new do |spec|
 
   # Rubocop is a static code analyzer based on our Ruby style guide.
   spec.add_dependency "rubocop", "~> 0.48.1"
-  spec.add_dependency "pronto-rubocop", "~> 0.8.0"
+  spec.add_dependency "pronto-rubocop", "~> 0.8.1"
 
   # Brakeman scans for security vulenerabilities.
-  spec.add_dependency "brakeman", "~> 3.5.0"
+  spec.add_dependency "brakeman", "~> 3.6.1"
   spec.add_dependency "pronto-brakeman", "~> 0.8.0"
 
   # Fasterer will suggest some speed improvements.
@@ -65,7 +65,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "pronto-fasterer", "~> 0.8.0"
 
   # SCSS Lint is a static code analyzer based on our SCSS style guide.
-  spec.add_dependency "scss_lint", "~> 0.52.0"
+  spec.add_dependency "scss_lint", "~> 0.53.0"
   spec.add_dependency "pronto-scss", "~> 0.8.0"
 
   # Pronto runner for monitoring Rails schema.rb or structure.sql consistency.
