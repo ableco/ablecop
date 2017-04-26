@@ -47,31 +47,31 @@ Gem::Specification.new do |spec|
   spec.add_dependency "deep_merge", "~> 1.1.1"
 
   # Pronto posts feedback from its runners to Github.
-  spec.add_dependency "pronto", "~> 0.8.2"
+  spec.add_dependency "pronto", "~> 0.9.1"
 
   # Octokit is required for updating commits / pull requests.
-  spec.add_dependency "octokit", "~> 4.6.2"
+  spec.add_dependency "octokit", "~> 4.7.0"
 
   # Rubocop is a static code analyzer based on our Ruby style guide.
   spec.add_dependency "rubocop", "~> 0.48.1"
-  spec.add_dependency "pronto-rubocop", "~> 0.8.1"
+  spec.add_dependency "pronto-rubocop", "~> 0.9.0"
 
   # Brakeman scans for security vulenerabilities.
   spec.add_dependency "brakeman", "~> 3.6.1"
-  spec.add_dependency "pronto-brakeman", "~> 0.8.0"
+  spec.add_dependency "pronto-brakeman", "~> 0.9.0"
 
   # Fasterer will suggest some speed improvements.
   spec.add_dependency "fasterer", "~> 0.3.2"
-  spec.add_dependency "pronto-fasterer", "~> 0.8.0"
+  spec.add_dependency "pronto-fasterer", "~> 0.9.0"
 
   # SCSS Lint is a static code analyzer based on our SCSS style guide.
   spec.add_dependency "scss_lint", "~> 0.53.0"
-  spec.add_dependency "pronto-scss", "~> 0.8.0"
+  spec.add_dependency "pronto-scss", "~> 0.9.1"
 
   # Pronto runner for monitoring Rails schema.rb or structure.sql consistency.
-  spec.add_dependency "pronto-rails_schema", "~> 0.8.0"
+  spec.add_dependency "pronto-rails_schema", "~> 0.9.0"
 
   # rails_best_practices is a code metric tool to check the quality of Rails code.
   spec.add_dependency "rails_best_practices", "~> 1.18.0"
-  spec.add_dependency "pronto-rails_best_practices", "0.8.0"
+  spec.add_dependency "pronto-rails_best_practices", "0.9.0"
 end

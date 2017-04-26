@@ -2,11 +2,11 @@
 
 ## Unreleased
 
+- **Pronto**: Update to [0.9.1](https://github.com/mmozuras/pronto/blob/master/CHANGELOG.md#091), and all its associated runners to 0.9.x
 - **RuboCop**: Update to [0.48.1](https://github.com/bbatsov/rubocop/blob/master/CHANGELOG.md#0481-2017-04-03) (#40)
-- **AbleCop**: Support for Ruby 2.4.
-- **Pronto**: Update pronto-rubocop to [0.8.1](https://github.com/mmozuras/pronto-rubocop/pull/24)
 - **Brakeman**: Update to [3.6.1](https://github.com/presidentbeef/brakeman/blob/master/CHANGES)
 - **scss-lint**: Update to [0.53.0](https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md#0530)
+- **AbleCop**: Support for Ruby 2.4.
 - **AbleCop**: Relax `railties` development dependency.
 
 ## 0.4.1
