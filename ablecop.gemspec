@@ -47,7 +47,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "deep_merge", "~> 1.1.1"
 
   # Pronto posts feedback from its runners to Github.
-  spec.add_dependency "pronto", "~> 0.9.1"
+  spec.add_dependency "pronto", "~> 0.9.2"
 
   # Octokit is required for updating commits / pull requests.
   spec.add_dependency "octokit", "~> 4.7.0"
