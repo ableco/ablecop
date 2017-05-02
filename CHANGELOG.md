@@ -1,15 +1,16 @@
 # AbleCop Changelog
 
-## Unreleased
+## 0.5.0
 
-- **Pronto**: Update to [0.9.2](https://github.com/mmozuras/pronto/blob/master/CHANGELOG.md#092), and all its associated runners to 0.9.x
+- **Pronto**: Update to [0.9.2](https://github.com/mmozuras/pronto/blob/master/CHANGELOG.md#092), and all its associated runners to 0.9.x (#45)
 - **RuboCop**: Update to [0.48.1](https://github.com/bbatsov/rubocop/blob/master/CHANGELOG.md#0481-2017-04-03) (#40)
-- **Brakeman**: Update to [3.6.1](https://github.com/presidentbeef/brakeman/blob/master/CHANGES)
-- **scss-lint**: Update to [0.53.0](https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md#0530)
-- **AbleCop**: Support for Ruby 2.4
-- **AbleCop**: Relax `railties` development dependency
-- **AbleCop**: Use new GitHub Pull Request review formatter when running on CircleCI
-- **AbleCop**: Change environment variable used by Pronto to set current pull request information from `PULL_REQUEST_ID` to `PRONTO_PULL_REQUEST_ID`
+- **RuboCop**: Set `Style/VariableNumber` rule to `snake_case` (#43)
+- **Brakeman**: Update to [3.6.1](https://github.com/presidentbeef/brakeman/blob/master/CHANGES) (#44)
+- **scss-lint**: Update to [0.53.0](https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md#0530) (#44)
+- **AbleCop**: Support for Ruby 2.4 (#42)
+- **AbleCop**: Relax `railties` development dependency (#44)
+- **AbleCop**: Use new GitHub Pull Request review formatter when running on CircleCI (#45)
+- **AbleCop**: Change environment variable used by Pronto to set current pull request information from `PULL_REQUEST_ID` to `PRONTO_PULL_REQUEST_ID` (#45)
 
 ## 0.4.1
 
