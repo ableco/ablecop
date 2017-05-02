@@ -9,18 +9,18 @@ namespace :ablecop do
 
     require_pronto_runners
 
-    # If CircleCI includes the pull request information, run the code analysis on the
-    # branch for the pull request.
     if ENV["CI_PULL_REQUEST"].present?
-      ENV["PULL_REQUEST_ID"] = ENV["CI_PULL_REQUEST"].match("[0-9]+$").to_s
-      abort("Pull Request ID is missing") if ENV["PULL_REQUEST_ID"].blank?
+      # If CircleCI includes the pull request information, run the code analysis on the
+      # branch for the pull request.
+      ENV["PRONTO_PULL_REQUEST_ID"] = ENV["CI_PULL_REQUEST"].match("[0-9]+$").to_s
+      abort("Pull Request ID is missing") if ENV["PRONTO_PULL_REQUEST_ID"].blank?
 
-      pull_request_formatter = Pronto::Formatter::GithubPullRequestFormatter.new
+      pull_request_review_formatter = Pronto::Formatter::GithubPullRequestReviewFormatter.new
       status_formatter = Pronto::Formatter::GithubStatusFormatter.new
-      Pronto.run("origin/master", ".", [pull_request_formatter, status_formatter])
-    # If CircleCI does not include the pull request information, run the
-    # code analysis on the current commit.
+      Pronto.run("origin/master", ".", [pull_request_review_formatter, status_formatter])
     else
+      # If CircleCI does not include the pull request information, run the
+      # code analysis on the current commit.
       formatter = Pronto::Formatter::GithubFormatter.new
       Pronto.run("origin/master", ".", formatter)
     end
