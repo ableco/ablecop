@@ -1,5 +1,9 @@
 # AbleCop Changelog
 
+## Unreleased
+
+- **RuboCop**: Disable `Style/GuardClause` rule (#48)
+
 ## 0.5.0
 
 - **Pronto**: Update to [0.9.2](https://github.com/mmozuras/pronto/blob/master/CHANGELOG.md#092), and all its associated runners to 0.9.x (#45)
