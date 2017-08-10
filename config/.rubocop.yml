@@ -870,12 +870,6 @@ Style/SymbolProc:
   IgnoredMethods:
     - respond_to
 
-Style/TrailingBlankLines:
-  EnforcedStyle: final_newline
-  SupportedStyles:
-    - final_newline
-    - final_blank_line
-
 Style/TrailingCommaInArguments:
   # If `comma`, the cop requires a comma after the last argument, but only for
   # parenthesized method calls where each argument is on its own line.
