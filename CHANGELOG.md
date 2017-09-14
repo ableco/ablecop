@@ -1,8 +1,15 @@
 # AbleCop Changelog
 
-## Unreleased
+## 0.6.0
 
 - **RuboCop**: Disable `Style/GuardClause` rule (#48)
+- **RuboCop**: Update to [0.49.1](https://github.com/bbatsov/rubocop/blob/master/CHANGELOG.md#0491-2017-05-29) (#52)
+- **RuboCop**: Update default configuration to change some rules to their new namespaces (#53)
+- **Pronto**: Update to [0.9.5](https://github.com/prontolabs/pronto/blob/master/CHANGELOG.md#095) (#52)
+- **Brakeman**: Update to [3.7.2](https://github.com/presidentbeef/brakeman/blob/master/CHANGES) (#52)
+- **scss-lint**: Update to [0.54.0](https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md#0540) (#52)
+- **scss-lint**: Update the [Shorthand](https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md#shorthand) rule to allow up to 4 shorthand properties (#51)
+- **AbleCop**: Update development dependency gems (Railties and RSpec) to their latest versions (#52)
 
 ## 0.5.0
 

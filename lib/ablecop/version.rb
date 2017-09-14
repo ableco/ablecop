@@ -1,4 +1,4 @@
 # :NO_DOC:
 module Ablecop
-  VERSION = "0.5.0".freeze
+  VERSION = "0.6.0".freeze
 end
