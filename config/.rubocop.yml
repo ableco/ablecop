@@ -859,7 +859,6 @@ Layout/SpaceInsideStringInterpolation:
     - no_space
 
 Style/SymbolArray:
-  EnforcedStyle: percent
   SupportedStyles:
     - percent
     - brackets
@@ -952,7 +951,6 @@ Style/WhileUntilModifier:
 
 # WordArray enforces how array literals of word-like strings should be expressed.
 Style/WordArray:
-  EnforcedStyle: percent
   SupportedStyles:
     # percent style: %w(word1 word2)
     - percent
