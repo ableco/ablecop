@@ -53,7 +53,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "octokit", "~> 4.7.0"
 
   # Rubocop is a static code analyzer based on our Ruby style guide.
-  spec.add_dependency "rubocop", "~> 0.49.1"
+  spec.add_dependency "rubocop", "~> 0.51.0"
   spec.add_dependency "pronto-rubocop", "~> 0.9.0"
 
   # Brakeman scans for security vulenerabilities.
