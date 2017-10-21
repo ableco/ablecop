@@ -1,5 +1,3 @@
-# coding: utf-8
-
 $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "ablecop/version"
 
