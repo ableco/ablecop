@@ -378,10 +378,7 @@ Style/Copyright:
 # By default, Rubocop enforces class-level documentation. Doesn't always
 # make sense in Rails apps.
 Style/Documentation:
-  Exclude:
-    - 'config/**/*'
-    - 'app/controllers/**/*'
-    - 'app/views/**/*'
+  Enabled: false
 
 # Multi-line method chaining should be done with leading dots.
 Layout/DotPosition:
