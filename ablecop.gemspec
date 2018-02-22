@@ -42,7 +42,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.6"
 
   # Recursively merge hashes - used for merging in configuration overrides.
-  spec.add_dependency "deep_merge", "~> 1.1.1"
+  spec.add_dependency "deep_merge", "~> 1.2.1"
 
   # Pronto posts feedback from its runners to Github.
   spec.add_dependency "pronto", "~> 0.9.5"
