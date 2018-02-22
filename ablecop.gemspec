@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
         - RAILS_ENV=development bundle exec rake ablecop:run_on_circleci
   MSG
 
-  spec.required_ruby_version = ">= 2.2.0"
+  spec.required_ruby_version = ">= 2.3.0"
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "generator_spec", "~> 0.9.3"
