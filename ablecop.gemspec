@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "generator_spec", "~> 0.9.3"
   spec.add_development_dependency "railties", [">= 4.0", "< 5.2"]
   spec.add_development_dependency "rake", "~> 12.0"
-  spec.add_development_dependency "rspec", "~> 3.6"
+  spec.add_development_dependency "rspec", "~> 3.7"
 
   # Recursively merge hashes - used for merging in configuration overrides.
   spec.add_dependency "deep_merge", "~> 1.2.1"
