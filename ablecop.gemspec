@@ -61,7 +61,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "pronto-brakeman", "~> 0.9.0"
 
   # Fasterer will suggest some speed improvements.
-  spec.add_dependency "fasterer", "~> 0.3.2"
+  spec.add_dependency "fasterer", "~> 0.4.0"
   spec.add_dependency "pronto-fasterer", "~> 0.9.0"
 
   # SCSS Lint is a static code analyzer based on our SCSS style guide.
