@@ -1,5 +1,19 @@
 # AbleCop Changelog
 
+## 0.7.0
+
+- **AbleCop**: Set required Ruby version to 2.3.0 or greater (#61)
+- **AbleCop**: Update development dependencies and other supporting libraries (#61)
+- **Brakeman**: Update to [4.2.0](https://github.com/presidentbeef/brakeman/blob/v4.2.0/CHANGES.md) (#61)
+- **fasterer**: Update to [0.4.0](https://github.com/DamirSvrtan/fasterer/blob/v0.4.0/CHANGELOG.md) (#61)
+- **RuboCop**: Update to [0.52.1](https://github.com/bbatsov/rubocop/blob/v0.52.1/CHANGELOG.md) and cleaned deprecated rules (#61)
+- **RuboCop**: Remove `EnforceStyle: percent` for `Style/SymbolArray` and `Style/WordArray` rules (#54)
+- **RuboCop**: Disable `Style/Documentation` rule (#56)
+- **RuboCop**: Set up `TargetRubyVersion` to 2.3 (#59)
+- **RuboCop**: Disable `Style/FrozenStringLiteralComment` rule (#59)
+- **RuboCop**: Exclude checking the `node_modules` directory (#60)
+- **scss-lint**: Update to [0.56.0](https://github.com/brigade/scss-lint/blob/v0.56.0/CHANGELOG.md) (#61)
+
 ## 0.6.0
 
 - **RuboCop**: Disable `Style/GuardClause` rule (#48)
