@@ -33,16 +33,16 @@ Gem::Specification.new do |spec|
         - RAILS_ENV=development bundle exec rake ablecop:run_on_circleci
   MSG
 
-  spec.required_ruby_version = ">= 2.2.0"
+  spec.required_ruby_version = ">= 2.3.0"
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "generator_spec", "~> 0.9.3"
   spec.add_development_dependency "railties", [">= 4.0", "< 5.2"]
   spec.add_development_dependency "rake", "~> 12.0"
-  spec.add_development_dependency "rspec", "~> 3.6"
+  spec.add_development_dependency "rspec", "~> 3.7"
 
   # Recursively merge hashes - used for merging in configuration overrides.
-  spec.add_dependency "deep_merge", "~> 1.1.1"
+  spec.add_dependency "deep_merge", "~> 1.2.1"
 
   # Pronto posts feedback from its runners to Github.
   spec.add_dependency "pronto", "~> 0.9.5"
@@ -51,22 +51,22 @@ Gem::Specification.new do |spec|
   spec.add_dependency "octokit", "~> 4.7.0"
 
   # Rubocop is a static code analyzer based on our Ruby style guide.
-  spec.add_dependency "rubocop", "~> 0.51.0"
+  spec.add_dependency "rubocop", "~> 0.52.1"
 
   # Pronto posts offenses as GitHub comments.
   spec.add_dependency "pronto-rubocop", "~> 0.9.0"
 
   # Brakeman scans for security vulenerabilities.
-  spec.add_dependency "brakeman", "~> 3.7.2"
+  spec.add_dependency "brakeman", "~> 4.2.0"
   spec.add_dependency "pronto-brakeman", "~> 0.9.0"
 
   # Fasterer will suggest some speed improvements.
-  spec.add_dependency "fasterer", "~> 0.3.2"
+  spec.add_dependency "fasterer", "~> 0.4.0"
   spec.add_dependency "pronto-fasterer", "~> 0.9.0"
 
   # SCSS Lint is a static code analyzer based on our SCSS style guide.
   spec.add_dependency "pronto-scss", "~> 0.9.1"
-  spec.add_dependency "scss_lint", "~> 0.54.0"
+  spec.add_dependency "scss_lint", "~> 0.56.0"
 
   # Pronto runner for monitoring Rails schema.rb or structure.sql consistency.
   spec.add_dependency "pronto-rails_schema", "~> 0.9.0"
